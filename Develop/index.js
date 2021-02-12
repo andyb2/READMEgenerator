@@ -14,7 +14,7 @@ const questions = [
     { message: 'Usage: How do you use the application?', name: 'usage' },
     { message: 'Credits: List your collaborators?', name: 'collab' },
     { message: 'Test: List your test instructions', name: 'test' },
-    { type: 'list', message: 'License: Choose your license', name: 'license', choices: ['MIT License', 'The Unlicense', 'Boost Software License 1.0', 'Apache License 2.0']}
+    { type: 'list', message: 'License: Choose your license', name: 'license', choices: ['MIT License', 'The Unlicense', 'Boost Software License 1.0', 'Apache License 2.0', 'No license']}
 ];
 
 // TODO: Create a function to write README file
