@@ -151,17 +151,16 @@ ${answer.installation}
 ${answer.usage}
 
 ## Credits
-${answer.collab}
-
-## Questions
+Created by: ${answer.collab}
 [Git Hub Profile](https://github.com/${answer.gitHub})
 
+## Questions
+If you have any questions about this project please email:
 Email: ${answer.email}
 
 # License
 
 ${renderLicenseSection(answer.license)}
-
   `
 }
 
