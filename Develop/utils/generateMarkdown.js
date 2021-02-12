@@ -180,14 +180,15 @@ ${answer.installation}
 ${answer.usage}
 
 ## Credits
-Created by: ${answer.collab}
+Created by: 
+${answer.collab}
 [Git Hub Profile](https://github.com/${answer.gitHub})
 
 ## Questions
 If you have any questions about this project please email:
-Email: ${answer.email}
+${answer.email}
 
-# License
+## License
 
 ${renderLicenseSection(answer.license)}
   `
