@@ -1,21 +1,21 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
- return `![${license}](https://img.shields.io/badge/license-${encodeURI(
-  license
-)}-blue.svg)`
+  return `![${license}](https://img.shields.io/badge/license-${encodeURI(
+    license
+  )}-blue.svg)`
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) { }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
-  if (license === 'MIT License'){
+  if (license === 'MIT License') {
     return `${license}
 
     Copyright (c) [year] [fullname]
@@ -37,9 +37,9 @@ function renderLicenseSection(license) {
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.`
-    }
-  
-  if (license === 'The Unlicense'){
+  }
+
+  if (license === 'The Unlicense') {
     return `${license}
   
     This is free and unencumbered software released into the public domain.
@@ -68,7 +68,7 @@ function renderLicenseSection(license) {
     For more information, please refer to <https://unlicense.org>`
   }
 
-  if (license === 'Boost Software License 1.0'){
+  if (license === 'Boost Software License 1.0') {
     return `${license}
   
     This is free and unencumbered software released into the public domain.
@@ -97,7 +97,7 @@ function renderLicenseSection(license) {
     For more information, please refer to <https://unlicense.org>`
   }
 
-  if (license === 'Apache License 2.0'){
+  if (license === 'Apache License 2.0') {
     return `${license}
   
     This is free and unencumbered software released into the public domain.
@@ -129,8 +129,37 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answer) {
-  
-  return `
+  if (answer.license === 'No license') {
+
+    return `
+# ${answer.title}
+
+## Description
+${answer.description}
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [Questions](#questions)
+
+## Installation
+${answer.installation}
+
+## Usage
+${answer.usage}
+
+## Credits
+Created by: ${answer.collab}
+[Git Hub Profile](https://github.com/${answer.gitHub})
+
+## Questions
+If you have any questions about this project please email:
+Email: ${answer.email}
+    `
+  } else {
+
+    return `
 # ${answer.title}
 ${renderLicenseBadge(answer.license)}
 
@@ -162,6 +191,7 @@ Email: ${answer.email}
 
 ${renderLicenseSection(answer.license)}
   `
+  }
 }
 
 module.exports = generateMarkdown;
