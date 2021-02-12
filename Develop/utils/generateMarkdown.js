@@ -141,6 +141,7 @@ ${answer.description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
+* [Questions](#questions)
 * [License](#license)
 
 ## Installation
@@ -148,6 +149,9 @@ ${answer.installation}
 
 ## Usage
 ${answer.usage}
+
+## Credits
+${answer.collab}
 
 ## Questions
 [Git Hub Profile](https://github.com/${answer.gitHub})
